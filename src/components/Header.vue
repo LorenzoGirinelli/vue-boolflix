@@ -2,17 +2,22 @@
     <header>
         <div class="logo">
             <img src="../assets/netflix.jpg" alt="">
+            <input v-model="userSearchtext" type="text">
+            <button @click="$emit('searchDone', userSearchtext)">Cerca</button>
         </div>
     </header>
 </template>
 
 <script>
 export default {
-    name: "App",
-    components: {
+    name: "Header",
+    data: function () {
+        return {
+            userSearchtext: ''
+        };
+    }
         
-    },
-};
+}
 </script>
 
 <style lang="scss" scoped>
