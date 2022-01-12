@@ -1,6 +1,7 @@
 <template>
     <main>
-        <MovieCard v-for="movie in MovieList" :key="movie.id" />
+        <h2>Film</h2>
+        <MovieCard v-for="movie in MovieList" :key="movie.id" :details="movie" />
     </main>
 </template>
 
