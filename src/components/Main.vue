@@ -1,9 +1,13 @@
 <template>
     <main>
-        <h2>Film</h2>
-        <MovieCard v-for="movie in MovieList" :key="movie.id" :details="movie" />
-        <h2>Serie</h2>
-        <MovieCard v-for="serietv in seriesList" :key="serietv.id" :details="serietv" />
+        <h2 class="movielist">Film</h2>
+        <div class="movielist">
+            <MovieCard v-for="movie in MovieList" :key="movie.id" :details="movie" />
+        </div>
+        <h2 class="movielist">Serie</h2>
+        <div class="movielist">
+            <MovieCard v-for="serietv in seriesList" :key="serietv.id" :details="serietv" />
+        </div>
     </main>
 </template>
 
@@ -20,3 +24,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+@import '../style/general.scss';
+</style>
