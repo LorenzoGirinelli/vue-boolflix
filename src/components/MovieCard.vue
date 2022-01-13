@@ -1,9 +1,15 @@
 <template>
     <div class="movie">
         <div>Titolo: {{details.title}} </div>
-        <div>Titolo originale: {{details.original_title}} </div>
-        <div>Lingua: {{details.original_language}}</div>
-        <div>Voto: {{details.vote_average}}</div>
+        <div>
+            Titolo originale: {{details.original_title}} 
+        </div>
+        <div>
+            Lingua: {{details.original_language}}
+            </div>
+        <div>
+            Voto: {{details.vote_average}}
+        </div>
         <div v-if="details.original_language === 'it'  || details.original_language === 'en' || details.original_language === 'pt'"  class="flag">
              <img :src= "require( '../assets/img/' + details.original_language + '.png')" >
         </div>
