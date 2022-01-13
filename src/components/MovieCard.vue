@@ -1,6 +1,6 @@
 <template>
     <div class="movie">
-        <div class="container">
+        <div>
             <ul>
                 <div v-if="details.poster_path !== null" class="poster">
                     <img :src="'https://image.tmdb.org/t/p/w342' + details.poster_path" :alt="details.name">
@@ -45,17 +45,43 @@ export default {
 <style lang="scss" scoped>
 @import '../style/general.scss';
 .movie {
-    margin: 10px;
+    margin: 15px;
     border: 1px solid black;
-    width: calc( (100% / 10) - 10px);
+    width: calc( (100% / 6) - 10px);
     text-align: center;
     img {
         width: 20px;
     }
     .poster{
         img{
-            width: 220px;
+            width: 200px;
         }
     }
 }
+@media screen and (min-width: 400px) {
+    .movie{
+        width:calc((100% / 2) - 20px)
+    }
+}
+@media screen and (min-width: 576px) {
+    .movie{
+        width:calc((100% / 3) - 20px)
+    }
+}
+@media screen and (min-width: 780px){
+    .movie{
+        width: calc((100% / 4) - 20px)
+    }
+};
+@media screen and (min-width: 1025px){
+    .movie{
+        width: calc((100% / 5) - 20px)
+    }
+};
+@media screen and (min-width: 1317px){
+    .movie{
+        width: calc((100% / 6) - 10px)
+    }
+}
 </style>
+
